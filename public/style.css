@@ -1,0 +1,216 @@
+
+
+.chat-header {
+  background: #4CAF50;
+  color: white;
+  padding: 15px;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.chat-input {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  background: #fff;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 8px;
+}
+
+.chat-input button {
+  padding: 8px 12px;
+  margin-left: 5px;
+}
+
+.user-message {
+  text-align: right;
+  margin: 5px 0;
+}
+
+.bot-message {
+  text-align: left;
+  margin: 5px 0;
+}
+.open-chat-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: linear-gradient(135deg, #838393, #7c3aed);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 14px 26px;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0 8px 20px rgba(79, 70, 229, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
+
+  .open-chat-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 25px rgba(124, 58, 237, 0.6);
+    background: linear-gradient(135deg, #7c3aed, #4f46e5);
+  }
+
+  .open-chat-btn:active {
+    transform: scale(0.95);
+  }
+
+  /* --- Chat Sidebar --- */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -400px; /* hidden by default */
+  width: 360px;
+  height: 100vh;
+  background: rgba(168, 202, 100, 0.95);
+  backdrop-filter: blur(10px);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  transition: right 0.4s ease;
+  z-index: 1200;
+  font-family: 'Inter', sans-serif;
+}
+
+/* When active (visible) */
+.sidebar.active {
+  right: 0;
+}
+
+/* --- Chat Header --- */
+.chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, #d4d4da, #7c3aed);
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Close Button */
+#close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+#close-btn:hover {
+  transform: rotate(90deg);
+}
+
+/* --- Chat Messages --- */
+.chat-messages {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  scrollbar-width: thin;
+  scrollbar-color: #ded6eb transparent;
+}
+
+/* Message bubbles */
+.user-message, .bot-message {
+  max-width: 80%;
+  padding: 10px 14px;
+  border-radius: 16px;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.user-message {
+  align-self: flex-end;
+  background: #4f46e5;
+}
+
+.bot-message {
+  align-self: flex-start;
+  background: #374151;
+}
+
+/* --- Chat Input --- */
+.chat-input {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  background: rgba(0, 0, 0, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+}
+
+.chat-input button {
+  margin-left: 10px;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.chat-input button:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}
+/* Smoothly hide and show the chat button */
+.open-chat-btn {
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+.open-chat-btn.hide-btn {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.8);
+}
+
+/* Sidebar slide animation (if not already added) */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 360px;
+  height: 100vh;
+  background: rgba(31, 41, 55, 0.95);
+  backdrop-filter: blur(10px);
+  color: white;
+  transition: right 0.4s ease;
+  z-index: 1200;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar.active {
+  right: 0;
+}
