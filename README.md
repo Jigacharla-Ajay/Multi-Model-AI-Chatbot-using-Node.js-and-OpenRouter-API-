@@ -25,26 +25,4 @@ If one AI model fails (rate limit / busy), the server automatically switches to 
 
 ---
 
-## 📂 Project Structure
-test-ai-chatbot/
-│── node_modules/
-│── public/
-│ ├── style.css
-│ └── chat.js
-│── views/
-│ └── index.ejs
-│── .env
-│── .gitignore
-│── app.js
-│── package-lock.json
-│── package.json
-│── README.mdect-folder/
-│── views/
-│ └── index.ejs
-│── public/
-│ ├── style.css
-│ └── script.js
-│── app.js
-│── package.json
-│── README.md
-│── .env
+
