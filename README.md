@@ -28,10 +28,10 @@ If one AI model fails (rate limit / busy), the server automatically switches to 
 ## 📂 Project Structure
 project-folder/
 │── views/
-│   └── index.ejs
+│ └── index.ejs
 │── public/
-│   ├── style.css
-│   └── script.js
+│ ├── style.css
+│ └── script.js
 │── app.js
 │── package.json
 │── README.md
